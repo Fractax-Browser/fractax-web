@@ -61,6 +61,7 @@ a { color: var(--accent); }
 .btn-gold { background: var(--gold); color: #1F1600; }
 .btn-small { padding: 8px 14px; font-size: 14px; }
 .btn svg { width: 18px; height: 18px; }
+.btn-soon { opacity: .55; pointer-events: none; cursor: default; }
 
 /* Hero */
 .hero { padding: 72px 0 40px; text-align: center; }

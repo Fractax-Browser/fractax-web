@@ -11,8 +11,19 @@ const FRACTAX_LINKS = {
   portal: 'https://polar.sh/fractax/portal',
 }
 
+// Plataformas con instalador publicado en la release. Las que estan a false
+// salen deshabilitadas y sin enlace (asi no dan 404); ponerlas a true
+// cuando su instalador este publicado.
+const AVAILABLE = { macArm: true, macIntel: true, windows: false, linux: false }
 for (const el of document.querySelectorAll('[data-link]')) {
-  const url = FRACTAX_LINKS[el.dataset.link]
+  const key = el.dataset.link
+  if (AVAILABLE[key] === false) {
+    el.removeAttribute('href')
+    el.setAttribute('aria-disabled', 'true')
+    el.classList.add('btn-soon')
+    continue
+  }
+  const url = FRACTAX_LINKS[key]
   if (url && /^https:\/\//.test(url)) el.href = url
 }
 
@@ -23,13 +34,13 @@ if (primary) {
   const isWin = /Windows/i.test(ua)
   const isMac = /Macintosh|Mac OS X/i.test(ua)
   const isLinux = /Linux/i.test(ua) && !/Android/i.test(ua)
-  if (isWin) {
+  if (isWin && AVAILABLE.windows) {
     primary.href = FRACTAX_LINKS.windows
     primary.querySelector('span').textContent = primary.dataset.labelWindows
   } else if (isMac) {
     primary.href = FRACTAX_LINKS.macArm
     primary.querySelector('span').textContent = primary.dataset.labelMac
-  } else if (isLinux) {
+  } else if (isLinux && AVAILABLE.linux) {
     primary.href = FRACTAX_LINKS.linux
     primary.querySelector('span').textContent = primary.dataset.labelLinux
   }
