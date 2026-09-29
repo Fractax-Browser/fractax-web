@@ -2,10 +2,10 @@
 // (Checkout Links de Polar, cuenta de produccion). Los botones llevan
 // data-link="<clave>" y aqui se les pone el href.
 const FRACTAX_LINKS = {
-  macArm: 'https://github.com/Carl0sGutierrez/fractax-web/releases/latest/download/Fractax-mac-arm64.dmg',
-  macIntel: 'https://github.com/Carl0sGutierrez/fractax-web/releases/latest/download/Fractax-mac-x64.dmg',
-  windows: 'https://github.com/Carl0sGutierrez/fractax-web/releases/latest/download/Fractax-windows-setup.exe',
-  linux: 'https://github.com/Carl0sGutierrez/fractax-web/releases/latest/download/Fractax-linux.AppImage',
+  macArm: 'https://github.com/Fractax-Browser/fractax-web/releases/latest/download/Fractax-mac-arm64.dmg',
+  macIntel: 'https://github.com/Fractax-Browser/fractax-web/releases/latest/download/Fractax-mac-x64.dmg',
+  windows: 'https://github.com/Fractax-Browser/fractax-web/releases/latest/download/Fractax-windows-setup.exe',
+  linux: 'https://github.com/Fractax-Browser/fractax-web/releases/latest/download/Fractax-linux.AppImage',
   buyMonthly: 'https://buy.polar.sh/polar_cl_WIaVqh52XuEvEhNRSZ9KUltmp9z2LujUn8uac3RUmpj',
   buyYearly: 'https://buy.polar.sh/polar_cl_VSe2jd23eSojOW2zjevhZQ8x2C4zC2BdVzBf424L5Sv',
   portal: 'https://polar.sh/fractax/portal',
