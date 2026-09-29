@@ -14,7 +14,7 @@ const FRACTAX_LINKS = {
 // Plataformas con instalador publicado en la release. Las que estan a false
 // salen deshabilitadas y sin enlace (asi no dan 404); ponerlas a true
 // cuando su instalador este publicado.
-const AVAILABLE = { macArm: true, macIntel: true, windows: false, linux: false }
+const AVAILABLE = { macArm: true, macIntel: true, windows: true, linux: true }
 for (const el of document.querySelectorAll('[data-link]')) {
   const key = el.dataset.link
   if (AVAILABLE[key] === false) {
