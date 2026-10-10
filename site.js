@@ -49,3 +49,28 @@ if (primary) {
 }
 
 document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear())
+
+// Analitica (GoatCounter): sin cookies y sin guardar la IP, asi que no hace
+// falta banner. Panel en https://fractax.goatcounter.com. Cuenta las visitas
+// y, como eventos, los clics en cada boton de descarga ("descarga-macArm"...).
+// Para que no cuenten tus propias visitas, abre una vez
+// https://fractax.com/#toggle-goatcounter en cada navegador que uses.
+const GOATCOUNTER_URL = 'https://fractax.goatcounter.com/count'
+const DOWNLOAD_KEYS = { macArm: 1, macIntel: 1, windows: 1, linux: 1 }
+if (location.hostname === 'fractax.com' || location.hostname === 'www.fractax.com') {
+  const gc = document.createElement('script')
+  gc.async = true
+  gc.src = 'https://gc.zgo.at/count.js'
+  gc.dataset.goatcounter = GOATCOUNTER_URL
+  document.head.appendChild(gc)
+}
+document.addEventListener('click', (e) => {
+  const a = e.target.closest && e.target.closest('a[href]')
+  if (!a || !window.goatcounter || !window.goatcounter.count) return
+  let key = a.dataset.link
+  if (a.hasAttribute('data-auto-download')) {
+    key = Object.keys(DOWNLOAD_KEYS).find((k) => FRACTAX_LINKS[k] === a.href) || 'auto'
+  }
+  if (!key || !(key in DOWNLOAD_KEYS || key === 'auto')) return
+  window.goatcounter.count({ path: 'descarga-' + key, title: 'Descarga ' + key, event: true })
+})
