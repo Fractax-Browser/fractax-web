@@ -50,6 +50,23 @@ if (primary) {
 
 document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear())
 
+// Videos de la app (<video data-autoplay>): en bucle y sin sonido, solo
+// mientras se ven en pantalla (no gastan datos ni bateria fuera de vista).
+// Con "reducir movimiento" no arrancan solos: se quedan con sus controles.
+const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+const videos = document.querySelectorAll('video[data-autoplay]')
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  for (const video of videos) video.controls = true
+} else {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) entry.target.play().catch(() => { entry.target.controls = true })
+      else entry.target.pause()
+    }
+  }, { threshold: 0.35 })
+  for (const video of videos) observer.observe(video)
+}
+
 // Analitica (GoatCounter): sin cookies y sin guardar la IP, asi que no hace
 // falta banner. Panel en https://fractax.goatcounter.com. Cuenta las visitas
 // y, como eventos, los clics en cada boton de descarga ("descarga-macArm"...).

@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://fractax.com/</loc><xhtml:link rel="alternate" hreflang="es" href="https://fractax.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://fractax.com/en/"/></url>
   <url><loc>https://fractax.com/en/</loc><xhtml:link rel="alternate" hreflang="es" href="https://fractax.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://fractax.com/en/"/></url>
+  <url><loc>https://fractax.com/como-funciona.html</loc><xhtml:link rel="alternate" hreflang="es" href="https://fractax.com/como-funciona.html"/><xhtml:link rel="alternate" hreflang="en" href="https://fractax.com/en/how-it-works.html"/></url>
+  <url><loc>https://fractax.com/en/how-it-works.html</loc><xhtml:link rel="alternate" hreflang="es" href="https://fractax.com/como-funciona.html"/><xhtml:link rel="alternate" hreflang="en" href="https://fractax.com/en/how-it-works.html"/></url>
   <url><loc>https://fractax.com/terminos.html</loc><xhtml:link rel="alternate" hreflang="es" href="https://fractax.com/terminos.html"/><xhtml:link rel="alternate" hreflang="en" href="https://fractax.com/en/terms.html"/></url>
   <url><loc>https://fractax.com/en/terms.html</loc><xhtml:link rel="alternate" hreflang="es" href="https://fractax.com/terminos.html"/><xhtml:link rel="alternate" hreflang="en" href="https://fractax.com/en/terms.html"/></url>
   <url><loc>https://fractax.com/privacidad.html</loc><xhtml:link rel="alternate" hreflang="es" href="https://fractax.com/privacidad.html"/><xhtml:link rel="alternate" hreflang="en" href="https://fractax.com/en/privacy.html"/></url>
