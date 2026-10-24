@@ -278,3 +278,10 @@ h2 { font-size: var(--t-xl); line-height: 1.12; margin: 0 0 16px; }
 .limits li { padding: 14px 0; border-top: 1px solid var(--line); color: var(--slate); }
 .limits li:last-child { border-bottom: 1px solid var(--line); }
 .features-intro .features-more { margin-top: 20px; font-size: 16px; }
+
+/* Tres planes: Free, Personal y Business */
+.pricing-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1020px) { .pricing-3 { grid-template-columns: 1fr; max-width: 520px; } }
+.plan .price-text { font-size: 30px; letter-spacing: -0.02em; }
+.plan .tag-soon { background: var(--tint); color: var(--slate); }
+.plan.business { border-style: dashed; }
