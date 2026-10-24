@@ -9,7 +9,7 @@ const FRACTAX_LINKS = {
   buyMonthly: 'https://buy.polar.sh/polar_cl_WIaVqh52XuEvEhNRSZ9KUltmp9z2LujUn8uac3RUmpj',
   buyYearly: 'https://buy.polar.sh/polar_cl_VSe2jd23eSojOW2zjevhZQ8x2C4zC2BdVzBf424L5Sv',
   portal: 'https://polar.sh/fractax/portal',
-  // Oferta de lanzamiento: Premium gratis 6 meses (producto gratuito en Polar).
+  // Oferta de lanzamiento: Personal gratis 6 meses (producto gratuito en Polar).
   earlyAdopter: 'https://buy.polar.sh/polar_cl_XvzuBUkfqdw0nNOOenfqqBGrzSBs30VbbYQOf2VxiKC',
 }
 
