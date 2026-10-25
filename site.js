@@ -8,6 +8,9 @@ const FRACTAX_LINKS = {
   linux: 'https://github.com/Fractax-Browser/fractax-web/releases/latest/download/Fractax-linux.AppImage',
   buyMonthly: 'https://buy.polar.sh/polar_cl_WIaVqh52XuEvEhNRSZ9KUltmp9z2LujUn8uac3RUmpj',
   buyYearly: 'https://buy.polar.sh/polar_cl_VSe2jd23eSojOW2zjevhZQ8x2C4zC2BdVzBf424L5Sv',
+  // Business: aun sin boton en la web ("Proximamente").
+  buyBusinessMonthly: 'https://buy.polar.sh/polar_cl_e2SrNcvLmwEQYQDikVOUakYXrWVOa8y9iTCqA2bEYqM',
+  buyBusinessYearly: 'https://buy.polar.sh/polar_cl_x8qVworFLotxZgLxuTBVjDMZFuxKuwYJuWuyG1lXbQE',
   portal: 'https://polar.sh/fractax/portal',
   // Oferta de lanzamiento: Personal gratis 6 meses (producto gratuito en Polar).
   earlyAdopter: 'https://buy.polar.sh/polar_cl_XvzuBUkfqdw0nNOOenfqqBGrzSBs30VbbYQOf2VxiKC',
