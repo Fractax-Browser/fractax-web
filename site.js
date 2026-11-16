@@ -9,6 +9,7 @@ const FRACTAX_LINKS = {
   windows: 'https://apps.microsoft.com/detail/9p58d2btct7z',
   windowsExe: 'https://github.com/Fractax-Browser/fractax-web/releases/latest/download/Fractax-windows-setup.exe',
   linux: 'https://github.com/Fractax-Browser/fractax-web/releases/latest/download/Fractax-linux.AppImage',
+  linuxDeb: 'https://github.com/Fractax-Browser/fractax-web/releases/latest/download/Fractax-linux.deb',
   buyMonthly: 'https://buy.polar.sh/polar_cl_WIaVqh52XuEvEhNRSZ9KUltmp9z2LujUn8uac3RUmpj',
   buyYearly: 'https://buy.polar.sh/polar_cl_VSe2jd23eSojOW2zjevhZQ8x2C4zC2BdVzBf424L5Sv',
   // Business: aun sin boton en la web ("Proximamente").
@@ -22,7 +23,7 @@ const FRACTAX_LINKS = {
 // Plataformas con instalador publicado en la release. Las que estan a false
 // salen deshabilitadas y sin enlace (asi no dan 404); ponerlas a true
 // cuando su instalador este publicado.
-const AVAILABLE = { macArm: true, macIntel: true, windows: true, windowsExe: true, linux: true }
+const AVAILABLE = { macArm: true, macIntel: true, windows: true, windowsExe: true, linux: true, linuxDeb: true }
 for (const el of document.querySelectorAll('[data-link]')) {
   const key = el.dataset.link
   if (AVAILABLE[key] === false) {
@@ -79,7 +80,7 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
 // Para que no cuenten tus propias visitas, abre una vez
 // https://fractax.com/#toggle-goatcounter en cada navegador que uses.
 const GOATCOUNTER_URL = 'https://fractax.goatcounter.com/count'
-const DOWNLOAD_KEYS = { macArm: 1, macIntel: 1, windows: 1, windowsExe: 1, linux: 1 }
+const DOWNLOAD_KEYS = { macArm: 1, macIntel: 1, windows: 1, windowsExe: 1, linux: 1, linuxDeb: 1 }
 if (location.hostname === 'fractax.com' || location.hostname === 'www.fractax.com') {
   const gc = document.createElement('script')
   gc.async = true

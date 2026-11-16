@@ -357,3 +357,26 @@ h2 { font-size: var(--t-xl); line-height: 1.12; margin: 0 0 16px; }
 /* Insignia oficial de la Microsoft Store (Windows) bajo las plataformas */
 .store-badge { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin: 14px 0 0; font-size: var(--t-sm); color: var(--slate); }
 .store-badge img { display: block; height: 44px; width: auto; }
+
+/* Descargas: una tarjeta por sistema, con su logo (Font Awesome Brands, CC BY 4.0) */
+.os-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; max-width: 1040px; margin: 8px auto 0; text-align: left; }
+@media (max-width: 880px) { .os-cards { grid-template-columns: 1fr; max-width: 460px; } }
+.os-card { position: relative; display: flex; flex-direction: column; gap: 6px; padding: 26px 24px 22px; border-radius: 16px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease; }
+.os-card:hover { background: rgba(255, 255, 255, 0.09); border-color: rgba(255, 255, 255, 0.24); transform: translateY(-2px); }
+.os-logo { width: 40px; height: 40px; margin-bottom: 8px; background: #fff; -webkit-mask: var(--os-icon) center / contain no-repeat; mask: var(--os-icon) center / contain no-repeat; }
+.os-logo-apple { --os-icon: url("/img/os/apple.svg"); }
+.os-logo-windows { --os-icon: url("/img/os/windows.svg"); }
+.os-logo-linux { --os-icon: url("/img/os/linux.svg"); }
+.os-card h3 { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 22px; color: #fff; }
+.os-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 8px; border-radius: 99px; background: #F2C94C; color: #191919; }
+.cta .os-sub { margin: 0; font-size: var(--t-sm); color: #9AA5B4; }
+.os-feats { list-style: none; padding: 0; margin: 12px 0 18px; display: flex; flex-direction: column; gap: 8px; font-size: var(--t-sm); color: #D7DEE8; flex: 1; }
+.os-feats li { display: flex; gap: 8px; align-items: flex-start; line-height: 1.45; }
+.os-feats li::before { content: ""; flex: none; width: 14px; height: 14px; margin-top: 3px; background: #4ADE80; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat; }
+.os-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.os-btn { flex: 1; display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0 14px; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.28); color: #fff; font-weight: 600; font-size: 14px; text-decoration: none; white-space: nowrap; transition: background-color 0.15s ease, border-color 0.15s ease; }
+.os-btn:hover { border-color: rgba(255, 255, 255, 0.6); }
+.os-btn-primary { background: #fff; border-color: #fff; color: var(--ink); }
+.os-btn-primary:hover { background: #EDEDEB; }
+.cta .os-extra { margin: 10px 0 0; font-size: 13px; color: #9AA5B4; }
+.os-extra a { color: #fff; }

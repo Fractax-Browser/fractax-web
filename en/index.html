@@ -223,11 +223,29 @@
       <div class="wrap">
         <h2>Start today, for free</h2>
         <p>Download Fractax, import your certificates and stop juggling between them.</p>
-        <div class="downloads">
-          <a class="btn btn-light" data-link="macArm" href="#download">Mac with Apple Silicon</a>
-          <a class="btn btn-dark-outline" data-link="macIntel" href="#download">Mac with Intel</a>
-          <a class="btn btn-dark-outline" data-link="windows" href="#download">Windows</a>
-          <a class="btn btn-dark-outline" data-link="linux" href="#download">Linux (beta)</a>
+        <div class="os-cards">
+          <article class="os-card os-apple">
+            <span class="os-logo os-logo-apple" aria-hidden="true"></span>
+            <h3>Mac</h3>
+            <p class="os-sub">macOS</p>
+            <ul class="os-feats"><li>Signed and notarized by Apple</li><li>Updates itself with each new version</li></ul>
+            <div class="os-btns"><a class="os-btn os-btn-primary" data-link="macArm" href="#download">Apple Silicon</a><a class="os-btn" data-link="macIntel" href="#download">Intel</a></div>
+          </article>
+          <article class="os-card os-windows">
+            <span class="os-logo os-logo-windows" aria-hidden="true"></span>
+            <h3>Windows</h3>
+            <p class="os-sub">Windows 10 and 11</p>
+            <ul class="os-feats"><li>Certified by Microsoft and published on the Microsoft Store</li><li>Signed by Microsoft: no warnings when installing</li></ul>
+            <div class="os-btns"><a class="os-btn os-btn-primary" data-link="windows" href="#download">Get it from Microsoft Store</a></div>
+            <p class="os-extra">or the <a data-link="windowsExe" href="#download">.exe installer</a></p>
+          </article>
+          <article class="os-card os-linux">
+            <span class="os-logo os-logo-linux" aria-hidden="true"></span>
+            <h3>Linux <span class="os-tag">Beta</span></h3>
+            <p class="os-sub">Ubuntu, Debian and others</p>
+            <ul class="os-feats"><li>AppImage or .deb package</li></ul>
+            <div class="os-btns"><a class="os-btn os-btn-primary" data-link="linux" href="#download">AppImage</a><a class="os-btn" data-link="linuxDeb" href="#download">.deb</a></div>
+          </article>
         </div>
       </div>
     </section>
