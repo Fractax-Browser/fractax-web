@@ -353,3 +353,7 @@ h2 { font-size: var(--t-xl); line-height: 1.12; margin: 0 0 16px; }
   .compare thead th { padding: 0; }
   .compare-brand { flex-direction: column; align-items: flex-start; gap: 6px; font-size: 14px; }
 }
+
+/* Insignia oficial de la Microsoft Store (Windows) bajo las plataformas */
+.store-badge { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; margin: 14px 0 0; font-size: var(--t-sm); color: var(--slate); }
+.store-badge img { display: block; height: 44px; width: auto; }
