@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="/img/logo-256.png">
   <meta name="theme-color" content="#FFFFFF">
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=20261116b">
+  <link rel="stylesheet" href="/styles.css?v=20261116c">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://fractax.com/#organization", "name": "Fractax", "url": "https://fractax.com/", "logo": "https://fractax.com/img/logo-256.png", "email": "support@fractax.com"}, {"@type": "WebSite", "@id": "https://fractax.com/en/#website", "name": "Fractax", "url": "https://fractax.com/en/", "inLanguage": "en", "publisher": {"@id": "https://fractax.com/#organization"}}, {"@type": "SoftwareApplication", "@id": "https://fractax.com/#app", "name": "Fractax", "url": "https://fractax.com/", "description": "Manager for Spanish digital certificates and DEHú electronic notifications: several certificates open at once, each in its own space, with deadline and expiry alerts. Everything encrypted on your computer.", "applicationCategory": "BusinessApplication", "operatingSystem": "macOS, Windows, Linux", "softwareVersion": "1.2.1", "downloadUrl": "https://fractax.com/#descargar", "screenshot": "https://fractax.com/img/en/01-ventana-principal.jpg", "inLanguage": "en", "publisher": {"@id": "https://fractax.com/#organization"}, "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Personal", "price": "9.99", "priceCurrency": "EUR", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "9.99", "priceCurrency": "EUR", "unitText": "MONTH"}}, {"@type": "Offer", "name": "Personal (yearly)", "price": "79", "priceCurrency": "EUR", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "79", "priceCurrency": "EUR", "unitText": "YEAR"}}]}]}</script>
 </head>
 <body>
@@ -33,7 +33,7 @@
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
         <a class="lang" href="/" hreflang="es" lang="es">ES</a>
-        <a class="btn btn-primary btn-small" href="#download">Download</a>
+        <a class="btn btn-primary btn-small" href="#downloads">Download</a>
       </nav>
     </div>
   </header>
@@ -45,7 +45,7 @@
           <h1>All your digital certificates open at once</h1>
           <p class="lead">Each certificate with its own session and tabs. Move from one to another with one click, without closing anything or using private windows, and check your notifications without leaving Fractax.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary btn-large" data-auto-download data-link="macArm" data-label-mac="Download for Mac" data-label-windows="Get it from Microsoft Store" data-label-linux="Download for Linux" href="#download">
+            <a class="btn btn-primary btn-large" data-auto-download data-label-mac="Download for Mac" data-label-windows="Download for Windows" data-label-linux="Download for Linux" href="#downloads">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
               <span>Download for free</span>
             </a>
@@ -219,11 +219,11 @@
       </div>
     </section>
 
-    <section class="cta">
+    <section class="cta" id="downloads">
       <div class="wrap">
         <h2>Start today, for free</h2>
         <p>Download Fractax, import your certificates and stop juggling between them.</p>
-        <div class="os-cards">
+        <div class="os-cards" data-yours="For your computer">
           <article class="os-card os-apple">
             <span class="os-logo os-logo-apple" aria-hidden="true"></span>
             <h3>Mac</h3>
@@ -270,6 +270,6 @@
       <p class="disclaimer">Fractax is an independent product, not affiliated with any public body.</p>
     </div>
   </footer>
-  <script src="/site.js?v=20261116b"></script>
+  <script src="/site.js?v=20261116c"></script>
 </body>
 </html>

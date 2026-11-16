@@ -380,3 +380,10 @@ h2 { font-size: var(--t-xl); line-height: 1.12; margin: 0 0 16px; }
 .os-btn-primary:hover { background: #EDEDEB; }
 .cta .os-extra { margin: 10px 0 0; font-size: 13px; color: #9AA5B4; }
 .os-extra a { color: #fff; }
+
+/* La tarjeta del sistema de quien visita: seleccionada y con su etiqueta */
+.os-card.selected { background: rgba(255, 255, 255, 0.1); border: 2px solid #fff; padding: 25px 23px 21px; }
+.os-yours { position: absolute; top: -12px; left: 22px; padding: 3px 10px; border-radius: 99px; background: #fff; color: var(--ink); font-size: 12px; font-weight: 600; }
+.os-card.pulse { animation: os-pulse 1.4s ease-out 2; }
+@keyframes os-pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.45); } 100% { box-shadow: 0 0 0 18px rgba(255, 255, 255, 0); } }
+@media (prefers-reduced-motion: reduce) { .os-card.pulse { animation: none; } }

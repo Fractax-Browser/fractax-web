@@ -36,24 +36,49 @@ for (const el of document.querySelectorAll('[data-link]')) {
   if (url && /^https:\/\//.test(url)) el.href = url
 }
 
-// Boton principal de descarga segun el sistema de quien visita.
+// Sistema de quien visita: el boton principal dice "Descargar para Mac /
+// Windows / Linux" y, como el boton del menu, lleva a las tarjetas de
+// descarga con la de ese sistema seleccionada.
+const UA = navigator.userAgent
+const VISITOR_OS = /Windows/i.test(UA) ? 'windows' : /Macintosh|Mac OS X/i.test(UA) ? 'apple' : /Linux/i.test(UA) && !/Android/i.test(UA) ? 'linux' : ''
 const primary = document.querySelector('[data-auto-download]')
 if (primary) {
-  const ua = navigator.userAgent
-  const isWin = /Windows/i.test(ua)
-  const isMac = /Macintosh|Mac OS X/i.test(ua)
-  const isLinux = /Linux/i.test(ua) && !/Android/i.test(ua)
-  if (isWin && AVAILABLE.windows) {
-    primary.href = FRACTAX_LINKS.windows
-    primary.querySelector('span').textContent = primary.dataset.labelWindows
-  } else if (isMac) {
-    primary.href = FRACTAX_LINKS.macArm
-    primary.querySelector('span').textContent = primary.dataset.labelMac
-  } else if (isLinux && AVAILABLE.linux) {
-    primary.href = FRACTAX_LINKS.linux
-    primary.querySelector('span').textContent = primary.dataset.labelLinux
-  }
+  const label = { windows: primary.dataset.labelWindows, apple: primary.dataset.labelMac, linux: primary.dataset.labelLinux }[VISITOR_OS]
+  if (label) primary.querySelector('span').textContent = label
 }
+const osCards = document.querySelector('.os-cards')
+const yourCard = osCards && VISITOR_OS ? osCards.querySelector('.os-card.os-' + VISITOR_OS) : null
+if (yourCard) {
+  yourCard.classList.add('selected')
+  const tag = document.createElement('span')
+  tag.className = 'os-yours'
+  tag.textContent = osCards.dataset.yours || ''
+  yourCard.prepend(tag)
+}
+/** Lleva a las tarjetas y hace destacar la del sistema de quien visita. */
+function goToDownloads(smooth) {
+  const section = document.getElementById('descargas') || document.getElementById('downloads')
+  if (!section) return false
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  ;(yourCard || osCards || section).scrollIntoView({ behavior: smooth && !reduce ? 'smooth' : 'auto', block: 'center' })
+  if (yourCard) {
+    yourCard.classList.remove('pulse')
+    void yourCard.offsetWidth
+    yourCard.classList.add('pulse')
+  }
+  return true
+}
+document.addEventListener('click', (e) => {
+  const a = e.target.closest && e.target.closest('a[href]')
+  if (!a) return
+  const hash = a.getAttribute('href').replace(/^\/(en\/)?/, '')
+  if (hash !== '#descargas' && hash !== '#downloads') return
+  if (!document.getElementById(hash.slice(1))) return
+  e.preventDefault()
+  history.replaceState(null, '', hash)
+  goToDownloads(true)
+})
+if (location.hash === '#descargas' || location.hash === '#downloads') window.addEventListener('load', () => goToDownloads(false))
 
 document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear())
 
@@ -92,9 +117,6 @@ document.addEventListener('click', (e) => {
   const a = e.target.closest && e.target.closest('a[href]')
   if (!a || !window.goatcounter || !window.goatcounter.count) return
   let key = a.dataset.link
-  if (a.hasAttribute('data-auto-download')) {
-    key = Object.keys(DOWNLOAD_KEYS).find((k) => FRACTAX_LINKS[k] === a.href) || 'auto'
-  }
   if (!key || !(key in DOWNLOAD_KEYS || key === 'auto')) return
   window.goatcounter.count({ path: 'descarga-' + key, title: 'Descarga ' + key, event: true })
 })

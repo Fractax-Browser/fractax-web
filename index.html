@@ -20,7 +20,7 @@
   <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/img/logo-256.png">
   <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css?v=20261116b">
+  <link rel="stylesheet" href="/styles.css?v=20261116c">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://fractax.com/#organization", "name": "Fractax", "url": "https://fractax.com/", "logo": "https://fractax.com/img/logo-256.png", "email": "support@fractax.com"}, {"@type": "WebSite", "@id": "https://fractax.com/#website", "name": "Fractax", "url": "https://fractax.com/", "inLanguage": "es", "publisher": {"@id": "https://fractax.com/#organization"}}, {"@type": "SoftwareApplication", "@id": "https://fractax.com/#app", "name": "Fractax", "url": "https://fractax.com/", "description": "Gestor de certificados digitales y de notificaciones electrónicas de la DEHú: varios certificados abiertos a la vez, cada uno en su propio espacio, con avisos de plazos y de caducidad. Todo cifrado en tu equipo.", "applicationCategory": "BusinessApplication", "operatingSystem": "macOS, Windows, Linux", "softwareVersion": "1.2.1", "downloadUrl": "https://fractax.com/#descargar", "screenshot": "https://fractax.com/img/es/01-ventana-principal.jpg", "inLanguage": "es", "publisher": {"@id": "https://fractax.com/#organization"}, "offers": [{"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR"}, {"@type": "Offer", "name": "Personal", "price": "9.99", "priceCurrency": "EUR", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "9.99", "priceCurrency": "EUR", "unitText": "MONTH"}}, {"@type": "Offer", "name": "Personal (anual)", "price": "79", "priceCurrency": "EUR", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "79", "priceCurrency": "EUR", "unitText": "YEAR"}}]}]}</script>
 </head>
 <body>
@@ -33,7 +33,7 @@
         <a href="#precios">Precios</a>
         <a href="#preguntas">Preguntas</a>
         <a class="lang" href="/en/" hreflang="en" lang="en">EN</a>
-        <a class="btn btn-primary btn-small" href="#descargar">Descargar</a>
+        <a class="btn btn-primary btn-small" href="#descargas">Descargar</a>
       </nav>
     </div>
   </header>
@@ -45,7 +45,7 @@
           <h1>Todos tus certificados digitales abiertos a la vez</h1>
           <p class="lead">Cada certificado con su propia sesión y sus pestañas. Pasa de uno a otro con un clic, sin cerrar nada ni usar ventanas privadas, y consulta tus notificaciones sin salir de Fractax.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary btn-large" data-auto-download data-link="macArm" data-label-mac="Descargar para Mac" data-label-windows="Descargar de Microsoft Store" data-label-linux="Descargar para Linux" href="#descargar">
+            <a class="btn btn-primary btn-large" data-auto-download data-label-mac="Descargar para Mac" data-label-windows="Descargar para Windows" data-label-linux="Descargar para Linux" href="#descargas">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
               <span>Descargar gratis</span>
             </a>
@@ -219,11 +219,11 @@
       </div>
     </section>
 
-    <section class="cta">
+    <section class="cta" id="descargas">
       <div class="wrap">
         <h2>Empieza hoy, gratis</h2>
         <p>Descarga Fractax, importa tus certificados y olvídate de cambiar de uno a otro.</p>
-        <div class="os-cards">
+        <div class="os-cards" data-yours="Para tu equipo">
           <article class="os-card os-apple">
             <span class="os-logo os-logo-apple" aria-hidden="true"></span>
             <h3>Mac</h3>
@@ -278,6 +278,6 @@
       <p class="disclaimer">Fractax es un producto independiente, sin vínculo con ningún organismo público.</p>
     </div>
   </footer>
-  <script src="/site.js?v=20261116b"></script>
+  <script src="/site.js?v=20261116c"></script>
 </body>
 </html>
